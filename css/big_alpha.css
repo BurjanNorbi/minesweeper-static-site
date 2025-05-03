@@ -1,0 +1,13 @@
+@import url("./style.css");
+
+body {
+	font-size: 2em;
+}
+
+a#normal {
+	display: initial;
+}
+
+a#nagy {
+	display: none;
+}

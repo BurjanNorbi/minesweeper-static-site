@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="49.44 53.04 166.73 51.86">
+<defs>
+<clipPath id="clip_0">
+<path transform="matrix(1,0,0,-1,0,792)" d="M51.36 689.14H214.13V737.044H51.36Z" fill-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,0,792)" d="M49.44 687.1H216.17V738.964H49.44Z" fill-rule="evenodd"/>
+</clipPath>
+</defs>
+<g>
+<g clip-path="url(#clip_0)">
+<path transform="matrix(1,0,0,-1,0,792)" d="M50.88 689.5H213.77V737.524H50.88Z" fill="#fce4d6" fill-rule="evenodd"/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-726.12" x="52.8 57.58032 60.10848 63.486719 65.98176 71.61216 74.37216 76.8672 81.92352 84.418567 87.79681 90.29185">x - 1, y - 1</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-726.12" x="106.82 111.60032 114.36032 116.88848 121.92272 124.41776 127.796009 130.29105">x, y - 1</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-726.12" x="159.98 164.76032 167.28849 172.7864 175.31458 180.94498 183.70497 186.20001">x + 1, y</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-710.14" x="52.8 57.58032 60.10848 63.486719 65.98176 71.61216 74.37216 76.8672">x - 1, y</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-710.14" x="106.82 111.60032 114.36032 116.88848">x, y</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-710.14" x="159.98 164.76032 167.28849 172.7864 175.31458 180.94498 183.70497 186.20001">x + 1, y</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-694.18" x="52.8 57.58032 60.10848 63.486719 65.98176 71.61216 74.37216 76.8672 81.92352 84.418567 89.9496 92.44464">x - 1, y + 1</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-694.18" x="106.82 111.60032 114.36032 116.88848 121.92272 124.41776 129.9488 132.44385">x, y + 1</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 792)" font-size="11.04" font-family="Calibri"><tspan y="-694.18" x="159.98 164.76032 167.28849 172.7864 175.31458 180.94498 183.70497 186.20001 191.25634 193.75138 199.28243 201.77747">x + 1, y + 1</tspan></text>
+</g>
+<g clip-path="url(#clip_1)">
+<path transform="matrix(1,0,0,-1,0,792)" d="M49.44 688.18H52.32V738.964H49.44Z" fill="#4472c4" fill-rule="evenodd"/>
+<path transform="matrix(1,0,0,-1,0,792)" d="M103.46 688.18H106.34V736.084H103.46Z" fill="#4472c4" fill-rule="evenodd"/>
+<path transform="matrix(1,0,0,-1,0,792)" d="M156.62 688.18H159.5V736.084H156.62Z" fill="#4472c4" fill-rule="evenodd"/>
+<path transform="matrix(1,0,0,-1,0,792)" d="M212.21 688.18H215.09001V736.084H212.21Z" fill="#4472c4" fill-rule="evenodd"/>
+<path transform="matrix(1,0,0,-1,0,792)" d="M52.32 736.08H215.09V738.96H52.32Z" fill="#4472c4" fill-rule="evenodd"/>
+<path transform="matrix(1,0,0,-1,0,792)" d="M52.32 720.12H215.09V723H52.32Z" fill="#4472c4" fill-rule="evenodd"/>
+<path transform="matrix(1,0,0,-1,0,792)" d="M52.32 704.14H215.09V707.02H52.32Z" fill="#4472c4" fill-rule="evenodd"/>
+<path transform="matrix(1,0,0,-1,0,792)" d="M52.32 688.18H215.09V691.06H52.32Z" fill="#4472c4" fill-rule="evenodd"/>
+</g>
+</g>
+</svg>

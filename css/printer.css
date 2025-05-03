@@ -1,0 +1,57 @@
+* {
+	font-family: 'Times New Roman', Times, serif;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin: 1cm;
+}
+
+header,
+footer,
+nav,
+video {
+	display: none;
+}
+
+p {
+	text-align: justify;
+	font-size: 11pt;
+}
+
+img {
+	max-width: 10cm;
+	margin: 0 auto 0 auto;
+	display: block;
+	border: 1px solid black;
+}
+
+figcaption {
+	text-align: center;
+}
+
+table {
+	margin: 0 auto 0 auto;
+}
+
+th,
+td {
+	border: 1px solid black;
+}
+
+th {
+	text-align: center;
+}
+
+code {
+	white-space: pre-wrap;
+	display: block;
+	background-color: white;
+	border: 1px solid black;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+a:after {
+	content: " (" attr(href) ")";
+}

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<title>A játék elkészítése - Aknakereső</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script src="./scripts/styleswitcher.js"></script>
+
+	<link rel="stylesheet" type="text/css" title="normal" media="screen" href="./css/style.css">
+	<link rel="alternate stylesheet" type="text/css" title="nagybetus" media="screen" href="./css/big_alpha.css">
+	<link rel="stylesheet" type="text/css" media="print" href="./css/printer.css">
+
+</head>
+
+<body>
+	<span id="top"></span>
+	<nav class="kipozicional">
+		<a href="#tartalom">Ugrás a tartalomra</a>
+	</nav>
+	<header>
+		<input type="checkbox" id="main-menu">
+		<label class="hamburger" for="main-menu"><span class="hamburger-line"></span></label>
+		<nav class="main-menu">
+			<ul>
+				<li><a href="index.html">Kezdőlap</a></li>
+				<li><a href="jatekrol.html">A játékról</a></li>
+				<li><a class="current-page" href="jatek_elkeszitese.html">A játék elkészítése</a></li>
+				<li><a href="kapcsolat.html">Kapcsolat</a></li>
+			</ul>
+		</nav>
+		<nav class="alternate">
+			<ul>
+				<li><a id="nagy" class="alternate" href="#" onclick="setActiveStyleSheet('nagybetus'); return false;">Gyengénlátó változat</a></li>
+				<li><a id="normal" class="alternate" href="#" onclick="setActiveStyleSheet('normal'); return false;">Normál változat</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main id="tartalom">
+		<nav class="page-menu">
+			<ul>
+				<li>
+					<a href="#page-menu1">Aknakereső játék elkészítése HTML, CSS és <span lang="en">JavaScript</span> segítségével</a>
+					<ul>
+						<li><a href="#page-menu2">Szükséges előkészületek</a></li>
+						<li><a href="#page-menu3">Mit is akarunk mi készíteni?</a></li>
+						<li>
+							<a href="#page-menu4">Elkészítés</a>
+							<ul>
+								<li><a href="#page-menu5">Megjelenítési struktúra (HTML)</a></li>
+								<li><a href="#page-menu6">Megjelenítés stílusosan (CSS)</a></li>
+								<li>
+									<a href="#page-menu7">A játék lelke (<span lang="en">JavaScript</span>)</a>
+									<ul>
+										<li><a href="#page-menu8">A váz irányítása</a></li>
+										<li><a href="#page-menu9">Csináljunk táblát</a></li>
+										<li><a href="#page-menu10">Használjuk azt a táblát</a></li>
+										<li><a href="#page-menu11">Vége, de hogyan?</a></li>
+										<li><a href="#page-menu12">Gombok életre keltése</a></li>
+										<li><a href="#page-menu13">A tábla megjelenítése</a></li>
+										<li>
+											<a href="#page-menu14">Utolsó simítások</a>
+											<ul>
+												<li><a href="#page-menu15">A kód összefésülése</a></li>
+												<li><a href="#page-menu16">A kód végrehajtása</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div class="actual-content">
+			<article>
+				<section id="page-menu1">
+					<h1>Aknakereső játék elkészítése <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> és <span lang="en">JavaScript</span> segítségével</h1>
+					<p>Az aknakereső játék elkészítése remek kezdő lépés a <b>programozás</b> megismeréséhez. A <b>HTML, CSS, <span lang="en">JavaScript</span></b> hármas <b>egyszerűsége</b> és <b>támogatottsága</b> miatt igen könnyedén megtudjuk valósítani ötleteinket.</p>
+					<section id="page-menu2">
+						<h2>Szükséges előkészületek</h2>
+						<ul>
+							<li><b>HTML és CSS alapismeret</b> (elhanyagolható)</li>
+							<li><b>Szövegszerkesztő program</b> (lehetőleg szoftverfejlesztőknek szánt pl.: <span lang="en">Visual Studio Code</span>)</li>
+							<li><b>Modern webböngésző</b> (pl.: <span lang="en">Firefox, Google Chrome</span>, stb.)</li>
+						</ul>
+					</section>
+					<section id="page-menu3">
+						<h2>Mit is akarunk mi készíteni?</h2>
+						<p>A játék elkészítéséhez szükséges <b>ismerni</b> magát a <b>játék elvét</b> és az alap műveleteit. Ha még <b>nem ismered a "A játékról" menüpont</b> alatt tudsz erről olvasni. Az elkészült játszható <b>programhoz</b> alapvető <b>elvárásokat</b> kell hozzárendelni:</p>
+						<ol>
+							<li>Jelenítse meg a játék <b>tábláját</b></li>
+							<li>A táblán legyenek <b>rejtett aknák</b> "szétszórva"</li>
+							<li>A játékot <b>kattintással</b> lehessen használni</li>
+							<li>Legyen lehetőség <b>jelölni</b> az aknák helyzetét</li>
+							<li>Legyen lehetőség egy mezőt <b>felfedni</b></li>
+							<li>A hibás felfedés a <b>játék végét</b> okozza (nem játszahtó tovább)</li>
+							<li>Ha <b>véget ér</b> a játék <b>látható</b> legyen, hogy <b>miért</b> (vereség vagy győzelem)</li>
+							<li>Ha véget ér a játék legyen lehetőség az <b>újra kezdéséhez</b></li>
+						</ol>
+					</section>
+					<section id="page-menu4">
+						<h2>Elkészítés</h2>
+						<section id="page-menu5">
+							<h3>Megjelenítési struktúra (HTML)</h3>
+							<p>A választott eszközünk segítségével hihetetlen <b>egyszerű</b> módon eltudjuk készíteni a játékunk vázát (<i><span lang="en">index.html</span></i>). Nincs más dolgunk, mint egy <b>weblapként elképzelni</b> a leendő játékunk kinézetét. A <b>HTML leírónyelv</b> elemeit felhasználva, például a <b>címsorokat</b> (<span lang="en">h1, h2</span>, ...), a <b>tárolokat</b> (<span lang="en">div</span>) és a <b>gombokat</b> (<span lang="en">button</span>), már el is tudjuk <b>készíteni</b> a <b>vázat</b>.</p>
+							<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="hu"&gt;
+	&lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;title&gt;Aknakereső&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Aknakereső&lt;/h1&gt;
+		&lt;button&gt;Zászló&lt;/button&gt;
+		&lt;button&gt;Felfed&lt;/button&gt;
+		&lt;br&gt;
+		&lt;div&gt;
+			&lt;div&gt;1&lt;/div&gt;
+			&lt;div&gt;A&lt;/div&gt;
+			&lt;br&gt;
+			&lt;div&gt;Z&lt;/div&gt;
+			&lt;div&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;h2&gt;Eredmény helye&lt;/h2&gt;
+		&lt;button&gt;Újra kezdés&lt;/button&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+							<figure>
+								<a href="./img/basic_html.png" target="_blank"><img src="./img/basic_html_small.png" alt="Formázatlan weboldal képernyőképe Aknakereső címmel, magyar nyelven megjelenítve."></a>
+							</figure>
+						</section>
+						<section id="page-menu6">
+							<h3>Megjelenítés stílusosan (CSS)</h3>
+							<p>Az eddig elkészített felületet nem éppen a szépségért szeretjük. Azonban ez orvosolható egy <b>stíluslap</b> (<i><span lang="en">style.css</span></i>) <b>segítségével</b>. A stíluslap segítségével <b>jobb kinézetet</b> tudunk varázsolni a játékunknak. A <b>HTML elemeket</b> úgy tudjuk <b>elérni</b> a stíluslapunkból, hogy az elemeket ellátjuk egy <b>osztály</b> (<span lang="en">class</span>) <b>névvel</b>, például a gombokat a gomb osztály névvel.</p>
+							<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="hu"&gt;
+	&lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;title&gt;Aknakereső&lt;/title&gt;
+		&lt;link rel="stylesheet" href="./style.css"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Aknakereső&lt;/h1&gt;
+		&lt;button class="gomb"&gt;Zászló&lt;/button&gt;
+		&lt;button class="gomb kiválasztottGomb"&gt;Felfed&lt;/button&gt;
+		&lt;br&gt;
+		&lt;div class="board"&gt;
+			&lt;div class="mező felfedett"&gt;1&lt;/div&gt;
+			&lt;div class="mező felfedett akna"&gt;A&lt;/div&gt;
+			&lt;br&gt;
+			&lt;div class="mező megjelölt"&gt;Z&lt;/div&gt;
+			&lt;div class="mező"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;h2&gt;Eredmény helye&lt;/h2&gt;
+		&lt;button class="gomb rejtett"&gt;Újra kezdés&lt;/button&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+							<pre><code>body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	background-color: #0b2027;
+}
+h1 {
+	color: #cfd7c7;
+}
+.győzelem {
+	color: green;
+}
+.vereség {
+	color: red;
+}
+.rejtett {
+	visibility: hidden;
+}
+.tábla {
+	display: inline-block;
+	margin: 20px;
+	background-color: #40798c;
+}
+.mező {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #70a9a1;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #40798c;
+	color: #cfd7c7;
+}
+.megjelölt {
+	background-color: greenyellow;
+	color: black;
+}
+.felfedett {
+	background-color: #0b2027;
+	border: 1px solid #f6f1d1;
+	color: #cfd7c7;
+}
+.akna {
+	background-color: #ff3333;
+}
+.gomb {
+	background-color: #f6f1d1;
+	border: none;
+	cursor: pointer;
+}
+.kiválasztottGomb {
+	background-color: palevioletred;
+}</code></pre>
+							<figure>
+								<a href="./img/style_html.png" target="_blank"><img src="./img/style_html_small.png" alt="Formázott weboldal képernyőképe Aknakereső címmel, magyar nyelven megjelenítve."></a>
+							</figure>
+						</section>
+						<section id="page-menu7">
+							<h3>A játék lelke (<span lang="en">JavaScript</span>)</h3>
+							<p>Most már valamelyest mutatós az eddigi munkánk. Ideje lenne írni hozzá néhány <b>funkciót</b>. A <b><span lang="en">JavaScript</span></b> az már egy tényleges <b>programozási nyelv</b>. Van benne minden, amire szükségünk lehet, <b>változók</b> (<span lang="en">let, const</span>), <b>elágazások</b> (<span lang="en">if, else</span>), <b>ciklusok</b> (<span lang="en">while, for</span>), <b>függvények</b> (<span lang="en">function</span>) és még rengeteg előre elkészített hasznos funkció, amik csak arra várnak, hogy használva legyenek.</p>
+							<section id="page-menu8">
+								<h4>A váz írányítása</h4>
+								<p>A <b>szkriptünkben</b> (<i><span lang="en">script.js</span></i>) a <b>HTML elemeket</b> hasonlóan tudjuk <b>elérni</b>, mint a stíluslapunkban. Szükséges az elemeket ellátni egy <b>azonosítóval</b> (<span lang="en">id</span>), például a táblánkat a "tábla" azonosítóval.</p>
+								<pre><code>const tábla_html = document.getElementById("tábla");</code></pre>
+								<p>Ezzel a módszerrel a táblánkat eltárolhatjuk a "tábla_html" konstans változóba. Ez azt jelenti, hogy a változó értéke nem módosítható. Ezzel jelezhetjük, hogy a változónak nem kell akarjuk az értékét változtatni a későbbiekben.</p>
+							</section>
+							<section id="page-menu9">
+								<h4>Csináljunk táblát</h4>
+								<pre><code>let tábla;</code></pre>
+								<p>Ez a tábla elég furcsa tábla. Nézzünk egy másik táblát.</p>
+								<figure>
+									<a href="./img/table.png" target="_blank"><img src="./img/table_small.png" alt="Képernyőkép egy nyitott Excel munkafüzetből, amelyben egy számokkal teli darab táblázat van."></a>
+								</figure>
+								<p>Ez már kiindulási alapnak tökéletes. Ezt sem tudjuk belemásolni a kódunkba, de egy kis ötleteléssel minden lehetséges. Ha jól megnézzük a képet akkor nagyon hasonlít valami ismerősre. Egy <b>mátrixra</b>. Nem ismerős a mátrix?</p>
+								<blockquote cite="https://hu.wikipedia.org/wiki/M%C3%A1trix_(matematika)">A mátrixok – a lineáris algebra (egyik) leghasznosabb fogalmaként – a matematikának a gyakorlatban legtöbbször alkalmazott eszközei között vannak, a matematika számos más ága mellett pedig a fizikától és komputergrafikától kezdve a biológián át egészen a nyelvészetig, számtalan tudományágban használhatóak akár az elméleti leírás tömör megfogalmazására, akár a számítások megkönnyítésére vagy automatizálására. - <a href="https://hu.wikipedia.org/wiki/M%C3%A1trix_(matematika)" target="_blank">Wikipédia</a>
+								</blockquote>
+								<p>Ha elég bátor voltál elolvasni a a belinkelt wikipédia cikkbe, akkor már értheted, hogy miért is jó nekünk a mátrix. Ha nem az sem probléma. <b>A mátrix egy téglalap alakú táblázata bármilyen adatnak.</b> Lehet, hogy a táblázat jobb első ötlet lett volna, mint egy kedves matematikai fogalom. Egy <b>táblázatnak oszlopai és sorai vannak</b>. Sor... Mintha lenne ilyesmi eszközünk a programozásban.</p>
+								<pre><code>let tábla = [];</code></pre>
+								<p>Ez egy <b>JavaScript tömb</b> (<span lang="en"><a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">array</a></span>), így már van egy sorunk. Hogyan lesz több sorunk? Természetesen <b>sorok sorjával</b>.</p>
+								<pre><code>tábla[0] = [];
+tábla[1] = [];
+tábla[2] = [];</code></pre>
+								<p>Kezd alakulni az <b>adatszerkezetünk</b>. Vegyük hasznát ciklusoknak.</p>
+								<pre><code>for(let i = 0; i &lt; 9; i++) {
+	tábla[i] = [];
+}</code></pre>
+								<p>Így sokkal egyszerűbb lesz dolgunk. most már van sok üres sorunk. Töltsük fel őket.</p>
+								<pre><code>for(let i = 0; i &lt; 9; i++) {
+	 tábla[i] = [];
+	 for(let j = 0; j &lt; 9; j++) {
+		  tábla[i][j] = {
+			   akna: false,
+			   felfedett: false,
+			   megjelölt: false,
+			   szomszédosAknákSzáma: 0
+		  }
+	 }
+}</code></pre>
+								<p>Mit tettünk a sorokba? A <b>tábla mezőinek a tulajdonságait</b>. Van-e ott <b>akna</b>, <b>fel van-e fedezve</b>, <b>meg van-e jelölve</b>, <b>mennyi akna van körülötte</b>. Ez mind hasznos információ a játékunk szempontjából. Az egyszerű tárolásban segítségünkre van az <b>objektum</b> (<span lang="en"><a href="https://www.w3schools.com/js/js_objects.asp" target="_blank">object</a></span>).</p>
+								<p>A táblára rejtett aknák kellenek, ráadásul szétszórva. <b>Addig tegyünk aknákat</b> a táblára, <b>amíg nincs</b> rajta <b>elegendő</b>.</p>
+								<pre><code>let elhelyezettAknákSzáma = 0;
+while (elhelyezettAknákSzáma &lt; 10) {
+	const sor = Math.floor(Math.random() * 9);
+	const oszlop = Math.floor(Math.random() * 9);
+	if (!tábla[sor][oszlop].akna) {
+		tábla[sor][oszlop].akna = true;
+		elhelyezettAknákSzáma++;
+	}
+}</code></pre>
+								<p>Hasznos ismerni a <a href="https://www.w3schools.com/js/js_math.asp" target="_blank"><span lang="en">Math</span> objektumot</a>. A használatával sok hasznos funkciót érhetünk el. Például a fentebb használt <b><span lang="en">Math.floor()</span></b>, ami egy paraméterül adott <b>számnak az egészrészét adja vissza</b> vagy a <b><span lang="en">Math.random()</span></b>, ami egy <b>0 és 1 közötti véletlenszerű értéket ad vissza</b>.</p>
+								<p>Most már vannak aknák szétszórva a táblán. Valami még így sincs rendben. A <b>szomszédos aknák száma</b> nem változott egyik mezőnél sem. Gyorsan orvosoljuk.</p>
+								<pre><code>for (let i = 0; i &lt; sorokSzáma; i++) {
+	for (let j = 0; j &lt; oszlopokSzáma; j++) {
+		if (!tábla[i][j].akna) {
+			let szomszédosAknákSzáma = 0;
+			for (let yEltolás = -1; yEltolás &lt;= 1; yEltolás++) {
+				for (let xEltolás = -1; xEltolás &lt;= 1; xEltolás++) {
+					const sor = i + yEltolás;
+					const oszlop = j + xEltolás;
+					if (sor >= 0 && sor &lt; sorokSzáma && oszlop >= 0 && oszlop &lt; oszlopokSzáma && tábla[sor][oszlop].akna) {
+						szomszédosAknákSzáma++;
+					}
+				}
+			}
+			tábla[i][j].szomszédosAknákSzáma = szomszédosAknákSzáma;
+		}
+	}
+}</code></pre>
+								<p>Ez egy kicsit bonyolultra sikeredett. Itt egy kép, ami segíthet a megértésben.</p>
+								<figure>
+									<img src="./img/help_neighbour_sum.svg" alt="Egy 3x3-as rács kilenc cellával, mindegyik cellában matematikai koordináták vannak, amelyek egy központi ponthoz viszonyított helyzeteket jelölnek.">
+								</figure>
+								<p>Az eddig írt kódunk mind egy funkciónak működését segítik elő, egy tábla létrohozását. <b>Tegyük bele az eddig írt kódunkat</b> egy a funkciókat jól összefoglaló nevő <b>függvénybe</b>.</p>
+								<pre><code>function táblaLétrehozása() {
+	// a tábla mezőinek létrehozása
+	...
+	// az aknák szétszórása
+	...
+	// a szomszédos aknák megszámolása
+	...
+}</code></pre>
+							</section>
+							<section id="page-menu10">
+								<h4>Hasznájuk azt a táblát</h4>
+								<p>Az eddig létrehozott <b>táblánk</b> nem sok vizet zavar. Hozzunk létre egy függvényt, amellyel könnyedén <b>módosíthatjuk</b> azt.</p>
+								<pre><code>function mezőMűvelet(sor, oszlop) {
+}</code></pre>
+								<p><b>Egy mezőre kettő lehetséges műveletet</b> adtunk meg az elején. A <b>megjelölés</b> és a <b>felfedés</b> műveletet. Honnan tudhatjuk, hogy éppen mit akarhat a játékos? <b>Eldöntéssel</b>.</p>
+								<pre><code>if(zászlóMód) {
+} else {
+}</code></pre>
+								<p>Ha jelölünk az pofon egyszerű.</p>
+								<pre><code>tábla[sor][oszlop].megjelölt = !(tábla[sor][oszlop]);</code></pre>
+								<p>Ha nem az már egy kicsit bonyolultabb. Először fel kell fedni a kivánt mezőt.</p>
+								<pre><code>tábla[sor][oszlop].felfedezett = true;</code></pre>
+								<p>Továbbá az is <b>kérdéses</b> hogy a felfedett mezőn <b>van-e akna</b>. <b>Ha van</b> akkor a játéknak <b>véget</b> kell érnie <b>vereséggel</b>. Viszont nem csak ebben az esetben van vége a játéknak. Akkor is véget kell érnie, ha győzelem következik be. <b>Győzelem</b> akkor lesz, <b>ha minden nem akna mezőt felfedett</b> a játékos.</p>
+								<pre><code>if (tábla[sor][oszlop].akna) {
+	// vége verseséggel
+} else {
+	felfedettMezőkSzáma++;
+	if(felfedettMezőkSzáma == 9 * 9 - 10) {
+		// vége győzelemmel
+	}
+}</code></pre>
+							</section>
+							<section id="page-menu11">
+								<h4>Vége, de hogyan?</h4>
+								<p>Írjunk egy függvényt!</p>
+								<pre><code>function vége(siker) {
+	játékVége = true;
+	újra_html.classList.remove("rejtett");
+	if(siker) {
+		eredmény_html.textContent = "Sikerült megoldani :)";
+		eredmény_html.className = "győzelem";
+	} else {
+		eredmény_html.textContent = "Nem sikerült megoldani :(";
+		eredmény_html.className = "vereség";
+	}
+}</code></pre>
+								<p>Ha vége van, akkor vége van. <b>Jelenítsük</b> meg az <b>eredményt</b> és az <b>újra kezdés</b> lehetőségét felajánló gombot. Ezt a "Váz írányítása" bekezdésben bemutatott módon tudjuk. Ha már tudunk hivatkozni a HTML elemekre, akkor tudjuk azokat módosítani is.</p>
+							</section>
+							<section id="page-menu12">
+								<h4>Gombok életre keltése</h4>
+								<p>A HTML elemek és a <span lang="en">JavaScript</span> leghasznosabb közös művelete az a <b>figyelő létrehozása</b> egy HTML elemhez. Ez a figyelő <b>vár a beállított "jelre"</b>. Ha <b>érzékeli</b>, akkor <b>végre hajt egy előre meghatározott függvényt</b>.</p>
+								<pre><code>újra_html.addEventListener(
+	"click",
+	() => {
+		játékKezdése();
+	}
+);</code></pre>
+								<p>Az újra kezdés gomb esetén ez így néz ki. A <b>"<span lang="en">click</span>"</b> (kattintás) az <b>a kívánt jel</b>. A következő sor érdekesebb. Ott egy <b>nyíl függvény</b> (<span lang="en"><a href="https://www.w3schools.com/js/js_arrow_function.asp" target="_blank">Arrow Function</a></span>) található.</p>
+								<p>A többi gomb is hasonlóan ellátható ilyen figyelővel.</p>
+								<pre><code>zászló_html.addEventListener(
+	"click",
+	() => {
+		zászlóMód = true;
+		zászló_html.classList.add("kiválasztottGomb");
+		felfed_html.classList.remove("kiválasztottGomb");
+	}
+);
+felfed_html.addEventListener(
+	"click",
+	() => {
+		zászlóMód = false;
+		zászló_html.classList.remove("kiválasztottGomb");
+		felfed_html.classList.add("kiválasztottGomb");
+	}
+);</code></pre>
+							</section>
+							<section id="page-menu13">
+								<h4>A tábla megjelenítése</h4>
+								<p>Az eddigi munkánk mit sem ér addig amíg a tábla nem változik a játék téren. Az eddig ismertetett funkciókkal, azonban könnyedén elkészíthető ez a funkció.</p>
+								<pre><code>function táblaMegjelenítése() {
+	tábla_html.innerHTML = "";
+
+	for (let i = 0; i &lt; 9; i++) {
+		for (let j = 0; j &lt; 9; j++) {
+
+			const mező_html = document.createElement("div");
+			mező_html.className = "mező";
+		
+			if (tábla[i][j].felfedezett) {
+				mező_html.classList.add("felfedett");
+			
+				if ( tábla[i][j].akna ) {
+					mező_html.classList.add("akna");
+					mező_html.textContent = "A";
+				} else if (tábla[i][j].szomszédosAknákSzáma > 0) {
+					mező_html.textContent = tábla[i][j].szomszédosAknákSzáma;
+				}
+			}
+			else if (tábla[i][j].megjelölt) {
+				mező_html.classList.add("megjelölt");
+				mező_html.textContent = "Z";
+			}
+			mező_html.addEventListener(
+				"click",
+				() => mezőMűvelet(i, j)
+			);
+			tábla_html.appendChild(mező_html);
+		}
+		tábla_html.appendChild(
+			document.createElement("br")
+		);
+	}
+}</code></pre>
+							</section>
+							<section id="page-menu14">
+								<h4>Utolsó simítások</h4>
+								<section id="page-menu15">
+									<h5>A kód összefésülése</h5>
+									<p>Ahoz, hogy <b>megfelelően működjön</b> a programunk a <b>megírt kódot helyes sorrendben kell elhelyeznünk</b> a szkript (<i><span lang="en">script.js</span></i>) fájlunkban. Ez azért fontos, hiszen egy ilyen szkript fájl <b>fentről lefelé van végig olvasva</b>, tehát nem hivatkozhaunk olyan változókra és függvényekre amik még nem volt eddig leírva.</p>
+								</section>
+								<section id="page-menu16">
+									<h5>A kód végrehajtása</h5>
+									<p><b>A kódunkat hivatkoznunk kell a HTML fájlunkban</b>, a mi esetünkben az <i><span lang="en">index.html</span></i> fájlban, <b>ügyelve a helyes sorrendre</b> ebben az eseben is.</p>
+									<pre><code>&lt;script src="./script.js"&gt;&lt;/script&gt;</code></pre>
+								</section>
+							</section>
+						</section>
+					</section>
+				</section>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<div>
+			<div>
+				<p>Források:</p>
+			</div>
+			<div>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)" target="_blank">Wikipédia</a></li>
+					<li><span lang="en"><a href="https://www.geeksforgeeks.org/create-a-minesweeper-game-using-html-css-javascript/" target="_blank">GeeksForGeeks</a></span></li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<p><a href="#top">ugrás az oldal tetejére</a></p>
+		</div>
+		<div>
+			<p>A nap vicce</p>
+			<iframe id="myFrame" src="https://www.viccesviccek.hu/viccdoboz.php?h=363062&w=160&b=17&sz=fff"></iframe>
+		</div>
+	</footer>
+
+</body>
+
+</html>

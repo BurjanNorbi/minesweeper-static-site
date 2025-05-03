@@ -1,0 +1,436 @@
+1
+00:00:00,080 --> 00:00:02,800
+hello in this video i will be going over
+
+2
+00:00:02,800 --> 00:00:04,400
+the main patterns you will find in the
+
+3
+00:00:04,400 --> 00:00:05,680
+game of minesweeper
+
+4
+00:00:05,680 --> 00:00:08,320
+and how they work being aware of the
+
+5
+00:00:08,320 --> 00:00:09,519
+recurring patterns
+
+6
+00:00:09,519 --> 00:00:10,960
+will stop you having to work out the
+
+7
+00:00:10,960 --> 00:00:12,799
+same logic multiple times
+
+8
+00:00:12,799 --> 00:00:14,639
+and will make solving the game quicker
+
+9
+00:00:14,639 --> 00:00:16,400
+and easier
+
+10
+00:00:16,400 --> 00:00:18,240
+in my opinion these are the main
+
+11
+00:00:18,240 --> 00:00:20,000
+patterns in the game that are useful to
+
+12
+00:00:20,000 --> 00:00:21,680
+start off learning
+
+13
+00:00:21,680 --> 00:00:23,119
+if you have come from my beginner's
+
+14
+00:00:23,119 --> 00:00:25,199
+guide video feel free to skip to the
+
+15
+00:00:25,199 --> 00:00:26,880
+timestamp of the ones that i have not
+
+16
+00:00:26,880 --> 00:00:28,800
+already explained
+
+17
+00:00:28,800 --> 00:00:30,320
+if you are just looking for answers to
+
+18
+00:00:30,320 --> 00:00:32,159
+all of these there is an imgur link in
+
+19
+00:00:32,159 --> 00:00:34,239
+the description for you
+
+20
+00:00:34,239 --> 00:00:35,920
+let's start with the three on the
+
+21
+00:00:35,920 --> 00:00:37,280
+straight
+
+22
+00:00:37,280 --> 00:00:39,520
+probably the most basic one that i would
+
+23
+00:00:39,520 --> 00:00:41,040
+even call a pattern
+
+24
+00:00:41,040 --> 00:00:43,360
+but since on a straight line like this
+
+25
+00:00:43,360 --> 00:00:45,760
+it can only be next to three cells
+
+26
+00:00:45,760 --> 00:00:50,000
+so you can always flag along the line
+
+27
+00:00:50,239 --> 00:00:52,559
+the one one and the two one are the two
+
+28
+00:00:52,559 --> 00:00:53,920
+fundamental patterns
+
+29
+00:00:53,920 --> 00:00:56,879
+so let's move on to those next for the
+
+30
+00:00:56,879 --> 00:00:59,359
+one one since the first two cells are
+
+31
+00:00:59,359 --> 00:01:00,960
+shared by both of the ones
+
+32
+00:01:00,960 --> 00:01:02,960
+the mind for the first one will always
+
+33
+00:01:02,960 --> 00:01:04,479
+satisfy the second one
+
+34
+00:01:04,479 --> 00:01:07,680
+so the third cell must always be free
+
+35
+00:01:07,680 --> 00:01:10,320
+note how this only works if there are no
+
+36
+00:01:10,320 --> 00:01:11,280
+other options
+
+37
+00:01:11,280 --> 00:01:14,960
+to the side of the first one
+
+38
+00:01:15,439 --> 00:01:18,479
+the two one pattern is fairly similar
+
+39
+00:01:18,479 --> 00:01:21,439
+for the two this one tells us that there
+
+40
+00:01:21,439 --> 00:01:21,920
+is one
+
+41
+00:01:21,920 --> 00:01:24,479
+mine in these two cells which only
+
+42
+00:01:24,479 --> 00:01:26,960
+leaves one space for the second mine
+
+43
+00:01:26,960 --> 00:01:30,000
+so you can always flag here because the
+
+44
+00:01:30,000 --> 00:01:32,240
+other mine must be in these two
+
+45
+00:01:32,240 --> 00:01:35,920
+this cell also has to be free
+
+46
+00:01:35,920 --> 00:01:38,400
+these last two are quite commonly found
+
+47
+00:01:38,400 --> 00:01:40,000
+but often don't progress too much on
+
+48
+00:01:40,000 --> 00:01:40,720
+their own
+
+49
+00:01:40,720 --> 00:01:42,399
+which is where it's useful to extend
+
+50
+00:01:42,399 --> 00:01:45,600
+them into the other patterns
+
+51
+00:01:46,000 --> 00:01:47,840
+the one two one is the most useful
+
+52
+00:01:47,840 --> 00:01:49,200
+pattern to look out for
+
+53
+00:01:49,200 --> 00:01:51,840
+and will quickly become your favorite
+
+54
+00:01:51,840 --> 00:01:54,000
+the only way to have two mines here
+
+55
+00:01:54,000 --> 00:01:56,240
+without putting two next to one of the
+
+56
+00:01:56,240 --> 00:01:57,200
+ones
+
+57
+00:01:57,200 --> 00:01:59,439
+is to have the mines on either side like
+
+58
+00:01:59,439 --> 00:02:01,680
+this
+
+59
+00:02:02,240 --> 00:02:05,360
+one two two one is another useful one
+
+60
+00:02:05,360 --> 00:02:07,040
+although seen less often than the one
+
+61
+00:02:07,040 --> 00:02:08,959
+two one in a way
+
+62
+00:02:08,959 --> 00:02:11,520
+this is a bit like two two one patterns
+
+63
+00:02:11,520 --> 00:02:13,200
+back to back
+
+64
+00:02:13,200 --> 00:02:15,680
+with the ones we know that there is only
+
+65
+00:02:15,680 --> 00:02:17,680
+one in these two cells
+
+66
+00:02:17,680 --> 00:02:20,400
+and one in these two cells so to
+
+67
+00:02:20,400 --> 00:02:21,680
+complete the twos
+
+68
+00:02:21,680 --> 00:02:24,480
+and not over satisfy the ones the flags
+
+69
+00:02:24,480 --> 00:02:25,280
+must be here
+
+70
+00:02:25,280 --> 00:02:28,080
+and here you can see how instead of
+
+71
+00:02:28,080 --> 00:02:29,599
+having to work out these two basic
+
+72
+00:02:29,599 --> 00:02:31,440
+patterns and put them together
+
+73
+00:02:31,440 --> 00:02:33,680
+knowing this pattern as its own thing
+
+74
+00:02:33,680 --> 00:02:35,519
+creates another shortcut to make things
+
+75
+00:02:35,519 --> 00:02:37,519
+easier
+
+76
+00:02:37,519 --> 00:02:40,400
+for the 1-1-1 pattern the mine must be
+
+77
+00:02:40,400 --> 00:02:41,760
+in the middle to satisfy
+
+78
+00:02:41,760 --> 00:02:44,640
+all of these ones if it was at either
+
+79
+00:02:44,640 --> 00:02:45,120
+edge
+
+80
+00:02:45,120 --> 00:02:47,040
+the one at the other side would not be
+
+81
+00:02:47,040 --> 00:02:48,959
+able to have a mine without putting two
+
+82
+00:02:48,959 --> 00:02:51,440
+minds next to the middle one
+
+83
+00:02:51,440 --> 00:02:54,160
+as an extension of the one one pattern
+
+84
+00:02:54,160 --> 00:02:54,879
+this again
+
+85
+00:02:54,879 --> 00:02:56,959
+doesn't apply when there are available
+
+86
+00:02:56,959 --> 00:03:00,319
+cells to the sides
+
+87
+00:03:00,560 --> 00:03:03,680
+as for the one one one one pattern
+
+88
+00:03:03,680 --> 00:03:06,400
+the only way to satisfy all of the ones
+
+89
+00:03:06,400 --> 00:03:07,040
+here
+
+90
+00:03:07,040 --> 00:03:10,560
+is if the mines are at both of the ends
+
+91
+00:03:10,560 --> 00:03:14,000
+again basically two one one patterns
+
+92
+00:03:14,000 --> 00:03:15,760
+so the role of having no more
+
+93
+00:03:15,760 --> 00:03:17,360
+constraints to the sides
+
+94
+00:03:17,360 --> 00:03:20,159
+still applies
+
+95
+00:03:20,879 --> 00:03:23,040
+i hope that you found this helpful if
+
+96
+00:03:23,040 --> 00:03:24,879
+any of these weren't clear to you
+
+97
+00:03:24,879 --> 00:03:26,959
+it can be useful to go back and see why
+
+98
+00:03:26,959 --> 00:03:28,640
+each one worked
+
+99
+00:03:28,640 --> 00:03:30,879
+i find trying out the other variations
+
+100
+00:03:30,879 --> 00:03:32,000
+and seeing why they don't
+
+101
+00:03:32,000 --> 00:03:35,920
+work can help clear things up
+
+102
+00:03:35,920 --> 00:03:37,920
+thanks for watching if you haven't
+
+103
+00:03:37,920 --> 00:03:40,400
+already do check out my larger guide
+
+104
+00:03:40,400 --> 00:03:42,640
+i do go on to expand on how you can use
+
+105
+00:03:42,640 --> 00:03:44,799
+these patterns more effectively
+
+106
+00:03:44,799 --> 00:03:47,840
+go watch that right now or go play
+
+107
+00:03:47,840 --> 00:03:50,080
+minesweeper on mysuper.online
+
+108
+00:03:50,080 --> 00:03:52,480
+or follow me on twitch at twitchtv.com
+
+109
+00:03:52,480 --> 00:03:56,000
+for some epic my super gameplay
+

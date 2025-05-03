@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<title>Kezdőap - Aknakereső</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script src="./scripts/styleswitcher.js"></script>
+
+	<link rel="stylesheet" type="text/css" title="normal" media="screen" href="./css/style.css">
+	<link rel="alternate stylesheet" type="text/css" title="nagybetus" media="screen" href="./css/big_alpha.css">
+	<link rel="stylesheet" type="text/css" media="print" href="./css/printer.css">
+</head>
+
+<body>
+	<span id="top"></span>
+	<nav class="kipozicional">
+		<a href="#tartalom">Ugrás a tartalomra</a>
+	</nav>
+	<header>
+		<input type="checkbox" id="main-menu">
+		<label class="hamburger" for="main-menu"><span class="hamburger-line"></span></label>
+		<nav class="main-menu">
+			<ul>
+				<li><a class="current-page" href="index.html">Kezdőlap</a></li>
+				<li><a href="jatekrol.html">A játékról</a></li>
+				<li><a href="jatek_elkeszitese.html">A játék elkészítése</a></li>
+				<li><a href="kapcsolat.html">Kapcsolat</a></li>
+			</ul>
+		</nav>
+		<nav class="alternate">
+			<ul>
+				<li><a id="nagy" class="alternate" href="#" onclick="setActiveStyleSheet('nagybetus'); return false;">Gyengénlátó változat</a></li>
+				<li><a id="normal" class="alternate" href="#" onclick="setActiveStyleSheet('normal'); return false;">Normál változat</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main id="tartalom">
+		<div>
+			<article>
+				<h1>Aknakereső</h1>
+				<p>Az aknakereső egy <b>logikai videójáték</b> személyi számítógépekre. A játékot kattintható mezőkből álló tábla segítségével játszhatjuk. Ezeken a mezőkön vannak szétszórva a <b>rejtett "aknák"</b>. A cél a tábla megtisztítása anélkül, hogy az aknákat aktiválnánk. Az egyetlen segítségünk a már felfedezett mezőkön szereplő számok. Ezek a számok a szomszédos aknák számát mutatják meg.</p>
+				<p>A játék eredete igen ködös. A <span lang="en"><a href="https://www.techradar.com/news/gaming/the-most-successful-game-ever-a-history-of-minesweeper-596504">TechRadar</a></span> szerint az <b>első</b> változata a játéknak az <b><time datetime="1990">1990-ben</time></b> megjelent <b><span lang="en">Microsoft Minesweeper</span></b> volt.</p>
+				<figure>
+					<a href="./img/microsoft_minesweeper.png"><img src="./img/microsoft_minesweeper_small.png" alt="Egy 15 másodpercig tartó, de hibásan befejezett Minesweeper játék képernyőképe, kék ég és zöld fű háttérrel."></a>
+					<figcaption><span lang="en">Microsoft Minesweeper</span></figcaption>
+				</figure>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<div>
+			<div>
+				<p>Források:</p>
+			</div>
+			<div>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)" target="_blank">Wikipédia</a></li>
+					<li><span lang="en"><a href="https://www.geeksforgeeks.org/create-a-minesweeper-game-using-html-css-javascript/" target="_blank">GeeksForGeeks</a></span></li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<p><a href="#top">ugrás az oldal tetejére</a></p>
+		</div>
+		<div>
+			<p>A nap vicce</p>
+			<iframe id="myFrame" src="https://www.viccesviccek.hu/viccdoboz.php?h=363062&w=160&b=17&sz=fff"></iframe>
+		</div>
+	</footer>
+</body>
+
+</html>
